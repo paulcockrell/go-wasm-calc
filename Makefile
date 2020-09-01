@@ -1,2 +1,6 @@
-compile:
-	GOOS=js GOARCH=wasm go build -o ./webpack-starter/public/main.wasm main.go
+build:
+	GOOS=js GOARCH=wasm go build -o ./assets/main.wasm cmd/wasm/main.go
+	go build -o ./calculator cmd/server/main.go
+
+run:
+	./calculator
